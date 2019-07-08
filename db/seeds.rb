@@ -12,4 +12,7 @@
 	Test.create(
 		caption: Faker::Games::WorldOfWarcraft.quote
     )
+	Person.create(
+        name: Faker::FunnyName.name
+    )
 end
