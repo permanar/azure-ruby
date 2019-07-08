@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Ruby - Azure
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      %menu
+        %span Our simple menu
+        %ul
+          %li{:class => ('active' if current_page?("/"))}
+            = link_to "Home", { :controller => 'home', :action => 'index' }
+          %li{:class => ('active' if current_page?("/people"))}
+            = link_to "People", { :controller => 'people' }
+          -# %li{:class => ('active' if current_page?("/tests"))}
+            /   = link_to "Tests", { :controller => 'test', :action => 'home' }
+    = yield

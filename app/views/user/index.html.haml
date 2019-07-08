@@ -1,0 +1,17 @@
+%h1 This is User Home
+
+- if notice
+  %p#notice
+    = notice
+
+- @users.each do |user|
+  %li
+    = user.name
+
+= form_for @person, html: {class: "nifty_form"} do |f|
+  = f.label :full_Name, :for => 'user_name'
+  \:
+  \#{f.text_field :name}
+  %br/
+  %br/
+  = f.submit
