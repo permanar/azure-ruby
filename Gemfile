@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem "nokogiri", ">= 1.8.5"
 gem "rack", ">= 2.0.6"
+gem "haml"
+gem 'bcrypt'
 gem "loofah", ">= 2.2.3"
 gem "tiny_tds"
 gem 'activerecord-sqlserver-adapter'
