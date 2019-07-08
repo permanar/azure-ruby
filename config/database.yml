@@ -11,15 +11,19 @@ default: &default
   adapter: sqlserver
   port: 1433
   mode: DBLIB
-  # azure: true
-  database: oende
+  azure: true
+  # database: oende
+  database: oendedb
 
 development:
   <<: *default
   # database: db/development.sqlite3
-  host: "localhost"
-  username: sa
-  password: Linuxmint18
+  # host: "localhost"
+  # username: sa
+  # password: Linuxmint18
+  host: "oendee.database.windows.net"
+  username: oende
+  password: Sidrockbali5
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,6 +35,6 @@ test:
 production:
   <<: *default
   # database: db/production.sqlite3
-  username: sa@localhost
-  password: Linuxmint18
-  host: "localhost"
+  host: "oendee.database.windows.net"
+  username: oende
+  password: Sidrockbali5
